@@ -1,77 +1,80 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-}
+    body {
+      background: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #1e1e2f;
-}
+    .container {
+      width: 350px;
+      background: #2f2f2f;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
 
-.calculator {
-  background: #2e2e3f;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  width: 320px;
-}
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 15px;
+    }
 
-.display {
-  background: #1e1e2f;
-  color: #fff;
-  font-size: 2.5rem;
-  text-align: right;
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  overflow-x: auto;
-}
+    #input {
 
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-}
+      max-width: fit-content;
+      height: 65px;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      background: #dcdcdc;
+      font-size: 28px;
+      text-align: right;
+      outline: none;
+    }
 
-button {
-  padding: 20px;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  background: #4e4e6a;
-  color: #fff;
-  transition: 0.2s;
-}
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+    }
 
-button:hover {
-  background: #6e6e8a;
-}
+    .col {
+      width: 24%;
+    }
 
-button.zero {
-  grid-column: span 2;
-}
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      font-size: 20px;
+      background-color: #ff9f43;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
 
-button[data-action="operator"] {
-  background: #ff9500;
-  color: #fff;
-}
+    button:hover {
+      opacity: 0.85;
+    }
 
-button[data-action="operator"]:hover {
-  background: #ffa733;
-}
+    button:active {
+      transform: scale(0.92);
+    }
 
-button[data-action="equals"] {
-  background: #1abc9c;
-  color: #fff;
-  grid-row: span 2;
-}
 
-button[data-action="equals"]:hover {
-  background: #2cd9b0;
-}
+    .op {
+      background: #ff6f00;
+    }
+
+
+    .equal {
+      background: #ff3d00;
+    }

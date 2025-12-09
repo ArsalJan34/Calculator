@@ -2,42 +2,68 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Calculator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
-  <div class="calculator">
-    <div class="display" id="display">0</div>
-    <div class="buttons">
-      <button data-action="clear">C</button>
-      <button data-action="delete">DEL</button>
-      <button data-action="operator" data-value="/">÷</button>
-      <button data-action="operator" data-value="*">×</button>
 
-      <button data-action="number" data-value="7">7</button>
-      <button data-action="number" data-value="8">8</button>
-      <button data-action="number" data-value="9">9</button>
-      <button data-action="operator" data-value="-">−</button>
+  <div class="container">
+    <h1>Calculator</h1>
 
-      <button data-action="number" data-value="4">4</button>
-      <button data-action="number" data-value="5">5</button>
-      <button data-action="number" data-value="6">6</button>
-      <button data-action="operator" data-value="+">+</button>
+    <input type="text" id="input" readonly />
 
-      <button data-action="number" data-value="1">1</button>
-      <button data-action="number" data-value="2">2</button>
-      <button data-action="number" data-value="3">3</button>
-      <button data-action="equals">=</button>
 
-      <button data-action="number" data-value="0" class="zero">0</button>
-      <button data-action="decimal" data-value=".">.</button>
+    <div class="row">
+      <div class="col"><button onclick="Cube()">X<sup>3</sup></button></div>
+      <div class="col"><button onclick="Sqaure()">X<sup>2</sup></button></div>
+      <div class="col"><button onclick="clearAllData()">C</button></div>
+      <div class="col"><button onclick="BackSpace()">⌫</button></div>
     </div>
+
+    <div class="row">
+      <div class="col"><button onclick="PercentageSol()">%</button></div>
+      <div class="col"><button onclick="Sqrt()">√</button></div>
+      <div class="col"><button>∛</button></div>
+      <div class="col"><button class="op" onclick="setNum('/')">/</button></div>
+    </div>
+
+    <div class="row">
+      <div class="col"><button onclick="setNum('7')">7</button></div>
+      <div class="col"><button onclick="setNum('8')">8</button></div>
+      <div class="col"><button onclick="setNum('9')">9</button></div>
+      <div class="col"><button class="op" onclick="setNum('*')">*</button></div>
+    </div>
+
+
+    <div class="row">
+      <div class="col"><button onclick="setNum('4')">4</button></div>
+      <div class="col"><button onclick="setNum('5')">5</button></div>
+      <div class="col"><button onclick="setNum('6')">6</button></div>
+      <div class="col"><button class="op" onclick="setNum('-')">-</button></div>
+    </div>
+
+    <div class="row">
+      <div class="col"><button onclick="setNum('1')">1</button></div>
+      <div class="col"><button onclick="setNum('2')">2</button></div>
+      <div class="col"><button onclick="setNum('3')">3</button></div>
+      <div class="col"><button class="op" onclick="setNum('+')">+</button></div>
+    </div>
+    <div class="row">
+      <div class="col"><button onclick="newSet('-')">-/+</button></div>
+      <div class="col"><button onclick="setNum('0')">0</button></div>
+      <div class="col"><button onclick="setNum('.')">.</button></div>
+      <div class="col"><button class="equal" onclick="Equal()">=</button></div>
+    </div>
+
   </div>
 
-  <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="calculatorNew.js"></script>
+
 </body>
 
 </html>
