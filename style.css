@@ -1,80 +1,86 @@
-    body {
-      background: #f1f1f1;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+body {
+  background: #e8f0ff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    .container {
-      width: 350px;
-      background: #2f2f2f;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
+.container {
+  width: 350px;
+  background: #1e2a3a;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-    h1 {
-      text-align: center;
-      color: white;
-      margin-bottom: 15px;
-    }
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+}
 
-    #input {
+#input {
+display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 65px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background: #cfd9ff;
+  font-size: 28px;
+  text-align: right;
+  outline: none;
+}
 
-      max-width: fit-content;
-      height: 65px;
-      border: none;
-      padding: 10px;
-      border-radius: 10px;
-      background: #dcdcdc;
-      font-size: 28px;
-      text-align: right;
-      outline: none;
-    }
+/* Button grid */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
 
-    .row {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 12px;
-    }
+.col {
+  width: 24%;
+}
 
-    .col {
-      width: 24%;
-    }
+/* Blue buttons */
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  background-color: #3b76ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
 
-    button {
-      width: 100%;
-      padding: 15px;
-      border: none;
-      border-radius: 12px;
-      font-size: 20px;
-      background-color: #ff9f43;
-      color: white;
-      cursor: pointer;
-      transition: 0.2s ease-in-out;
-    }
+/* Hover & click effect */
+button:hover {
+background-color: #011c5b;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 
-    button:hover {
-      opacity: 0.85;
-    }
+}
 
-    button:active {
-      transform: scale(0.92);
-    }
+button:active {
+  transform: scale(0.92);
+}
 
+/* Operator buttons */
+.op {
+  background: #2a5bd7;
+}
 
-    .op {
-      background: #ff6f00;
-    }
-
-
-    .equal {
-      background: #ff3d00;
-    }
+/* Equal button */
+.equal {
+  background: #1b44b8;
+}
